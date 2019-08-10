@@ -4,7 +4,7 @@
 \alias{eq_get_data}
 \title{Read in Data}
 \usage{
-eq_get_data(country, start_date, end_date = lubridate::today())
+eq_get_data(filename, country, start_date, end_date = lubridate::today())
 }
 \arguments{
 \item{country}{A country name in all capital letters as a sting, eg. 'MEXICO', or a vector of country names, eg. c('MEXICO','USA')}
