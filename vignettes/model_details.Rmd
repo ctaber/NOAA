@@ -15,9 +15,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 library(knitr)
-#library(NOAA) 
 
-#*****do I need to add in exampels for all functions or can I just metion some functions call other functions?
 ```
 
 This Package includes functions used to read in and map earthquake data from National Oceanic and Atmospheric Administration (NOAA), which is a American scientific agency within the United States Department of Commerce that focuses on the conditions of the oceans, major waterways, and the atmosphere. 
@@ -41,7 +39,8 @@ This Package includes functions used to read in and map earthquake data from Nat
 
 **Example of *eq_get_data*:**
 ```{r echo=TRUE}
-data<-eq_get_data(country = c('MEXICO','USA'), start_date = '2001-01-01', end_date = '2005-01-01')
+filename <- system.file('extdata', 'earthquakes.tsv.gz', package = 'NOAA')
+data<-eq_get_data(filename, country = c('MEXICO','USA'), start_date = '2006-01-01', end_date = '2009-01-01')
 head(data)
 ```
 
@@ -73,3 +72,4 @@ data %>%
      dplyr::mutate(popup_text = eq_create_label(.)) %>%
      eq_map(annot_col = "popup_text")
 ```
+

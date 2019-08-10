@@ -27,13 +27,14 @@
 eq_clean_data <- function(df){
   clean_data <- df %>%
     # drop date related NAs
-   tidyr::drop_na(YEAR, MONTH, DAY) %>%
-    # convert data types as appropriate
+    tidyr::drop_na(YEAR, MONTH, DAY) %>%
+   # convert data types as appropriate
    dplyr::mutate(
      YEAR = as.integer(YEAR),
      MONTH = as.integer(MONTH),
      DAY = as.integer(DAY)
      )%>%
+
     # remove pre-BC dates
    dplyr::filter(YEAR>0)%>%
     # fix date parts that are not correct fomrat for YYYY-MM-DD

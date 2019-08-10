@@ -25,10 +25,8 @@
 #'
 #' @export
 
-#
-eq_get_data<- function(country, start_date, end_date = lubridate::today()){
-  data<- system.file('data', 'earthquakes.tsv.gz', package = 'NOAA') # does this work?
-  # data<- readr::read_delim("earthquakes.tsv.gz", delim = "\t") %>%
+eq_get_data<- function(filename, country, start_date, end_date = lubridate::today()){
+   data <- readr::read_delim(filename, delim = '\t')
    data %>%
     eq_clean_data() %>%
     dplyr::filter(COUNTRY %in% country & DATE >= lubridate::ymd(start_date) & DATE<= lubridate::ymd(end_date))%>%
