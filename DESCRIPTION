@@ -1,0 +1,26 @@
+Package: NOAA
+Type: Package
+Title: Turn NOAA Data Into Earthquake Visualizations
+Version: 0.1.0
+Author: Chris Taber
+Maintainer: <taber.christopher@gmail.com>
+Description: Take NOAA earthquake data and create visualizations including timelines and interactive maps to show
+    details about the date, location, magnitude, and total deaths, related to an earthquake.
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    readr,
+    dplyr,
+    tidyr,
+    lubridate,
+    stringr,
+    ggplot2,
+    grid,
+    leaflet,
+    roxygen2,
+    testthat,
+    knitr,
+    rmarkdown
+RoxygenNote: 6.1.1
+VignetteBuilder: knitr
