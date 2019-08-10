@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 library(knitr)
-
+library(NOAA)
 ```
 
 This Package includes functions used to read in and map earthquake data from National Oceanic and Atmospheric Administration (NOAA), which is a American scientific agency within the United States Department of Commerce that focuses on the conditions of the oceans, major waterways, and the atmosphere. 
