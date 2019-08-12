@@ -22,8 +22,8 @@
 #'
 #'
 #' @examples
-#' \dontrun{eq_get_data(country = c('MEXICO','USA'), start_date = '2001-01-01', end_date = '2003-01-01')}
-#' \dontrun{eq_get_data(country = 'MEXICO', start_date = '2001-01-01')}
+#' \dontrun{eq_get_data(filename = system.file('extdata', 'earthquakes.tsv.gz', package = 'NOAA'), country = c('MEXICO','USA'), start_date = '2001-01-01', end_date = '2003-01-01')}
+#' \dontrun{eq_get_data(filename = system.file('extdata', 'earthquakes.tsv.gz', package = 'NOAA'), country = 'MEXICO', start_date = '2001-01-01')}
 #'
 #' @export
 

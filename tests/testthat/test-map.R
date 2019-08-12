@@ -2,14 +2,16 @@ context('eq_map')
 
 #eq_map
 test_that('eq_map returns a leaflet map when given valid input', {
-  valid_input <-eq_get_data(country = 'MEXICO', start_date = '2001-01-01')
+  filename <- system.file('extdata', 'earthquakes.tsv.gz', package = 'NOAA')
+  valid_input <-eq_get_data(filename, country = 'MEXICO', start_date = '2001-01-01')
   map <- eq_map(valid_input)
   expect_is(map, 'leaflet')
 })
 
 #eq_create_label
 test_that('eq_create_label only returns non-NA labels and data', {
-  data<- eq_get_data(country = 'MEXICO', start_date = '2006-09-09')
+  filename <- system.file('extdata', 'earthquakes.tsv.gz', package = 'NOAA')
+  data<- eq_get_data(filename, country = 'MEXICO', start_date = '2006-09-09')
   data<- data%>%select(DATE, LOCATION_NAME, EQ_PRIMARY, TOTAL_DEATHS)
 
   # 'Location' should not be in label if LOCATION_NAME data is NA
