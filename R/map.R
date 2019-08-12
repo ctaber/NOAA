@@ -1,8 +1,8 @@
 #' Create Interactive Map of Earthquake Data
 #'
 #' This function plots earthquakes and avaialble information about said earthquakes on an interactive map that will allow the used to click on an earthquake to see the relevant details.
-#'
-#' @param df data to plot
+#
+#' @param df data to plot'
 #'
 #' @param annot_col column to use for annotations, defaults to DATE
 #'

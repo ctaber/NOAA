@@ -4,9 +4,12 @@
 \alias{eq_get_data}
 \title{Read in Data}
 \usage{
-eq_get_data(filename, country, start_date, end_date = lubridate::today())
+eq_get_data(filename = system.file("extdata", "earthquakes.tsv.gz",
+  package = "NOAA"), country, start_date, end_date = lubridate::today())
 }
 \arguments{
+\item{filename}{Name of file to read in. Defaults to 'earthquakes.tsv.gz' data contained internally in package.}
+
 \item{country}{A country name in all capital letters as a sting, eg. 'MEXICO', or a vector of country names, eg. c('MEXICO','USA')}
 
 \item{start_date}{A date as a string in 'YYYY-MM-DD' format to filter observations for}

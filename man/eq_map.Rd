@@ -7,7 +7,7 @@
 eq_map(df, annot_col = "DATE")
 }
 \arguments{
-\item{df}{data to plot}
+\item{df}{data to plot'}
 
 \item{annot_col}{column to use for annotations, defaults to DATE}
 }
